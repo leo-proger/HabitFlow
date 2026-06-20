@@ -1,6 +1,6 @@
 //
 //  HabitDetailView.swift
-//  habit-tracker-trpo
+//  habit-flow
 //
 //  Created by Leo Proger on 3/28/2026.
 //

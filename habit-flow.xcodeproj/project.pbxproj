@@ -12,13 +12,13 @@
 
 /* Begin PBXFileReference section */
 		7B1EF0072FA20B3500CF669B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7B752DB02F69AA4A002FA83F /* habit-tracker-trpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "habit-tracker-trpo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B752DB02F69AA4A002FA83F /* habit-flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "habit-flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7B752DB22F69AA4A002FA83F /* habit-tracker-trpo */ = {
+		7B752DB22F69AA4A002FA83F /* habit-flow */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "habit-tracker-trpo";
+			path = "habit-flow";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -38,7 +38,7 @@
 			isa = PBXGroup;
 			children = (
 				7B1EF0072FA20B3500CF669B /* README.md */,
-				7B752DB22F69AA4A002FA83F /* habit-tracker-trpo */,
+				7B752DB22F69AA4A002FA83F /* habit-flow */,
 				7B752DB12F69AA4A002FA83F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,7 +46,7 @@
 		7B752DB12F69AA4A002FA83F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B752DB02F69AA4A002FA83F /* habit-tracker-trpo.app */,
+				7B752DB02F69AA4A002FA83F /* habit-flow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,9 +54,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7B752DAF2F69AA4A002FA83F /* habit-tracker-trpo */ = {
+		7B752DAF2F69AA4A002FA83F /* habit-flow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B752DBB2F69AA4B002FA83F /* Build configuration list for PBXNativeTarget "habit-tracker-trpo" */;
+			buildConfigurationList = 7B752DBB2F69AA4B002FA83F /* Build configuration list for PBXNativeTarget "habit-flow" */;
 			buildPhases = (
 				7B752DAC2F69AA4A002FA83F /* Sources */,
 				7B752DAD2F69AA4A002FA83F /* Frameworks */,
@@ -67,13 +67,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7B752DB22F69AA4A002FA83F /* habit-tracker-trpo */,
+				7B752DB22F69AA4A002FA83F /* habit-flow */,
 			);
-			name = "habit-tracker-trpo";
+			name = "habit-flow";
 			packageProductDependencies = (
 			);
-			productName = "habit-tracker-trpo";
-			productReference = 7B752DB02F69AA4A002FA83F /* habit-tracker-trpo.app */;
+			productName = "habit-flow";
+			productReference = 7B752DB02F69AA4A002FA83F /* habit-flow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7B752DAB2F69AA4A002FA83F /* Build configuration list for PBXProject "habit-tracker-trpo" */;
+			buildConfigurationList = 7B752DAB2F69AA4A002FA83F /* Build configuration list for PBXProject "habit-flow" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -105,7 +105,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B752DAF2F69AA4A002FA83F /* habit-tracker-trpo */,
+				7B752DAF2F69AA4A002FA83F /* habit-flow */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +261,7 @@
 				DEVELOPMENT_TEAM = 782629RKTY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+					INFOPLIST_KEY_CFBundleDisplayName = "Habit Flow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -271,7 +272,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.leo-proger.habit-tracker-trpo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.leo-proger.habit-flow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -293,6 +294,7 @@
 				DEVELOPMENT_TEAM = 782629RKTY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+					INFOPLIST_KEY_CFBundleDisplayName = "Habit Flow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.leo-proger.habit-tracker-trpo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.leo-proger.habit-flow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -318,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B752DAB2F69AA4A002FA83F /* Build configuration list for PBXProject "habit-tracker-trpo" */ = {
+		7B752DAB2F69AA4A002FA83F /* Build configuration list for PBXProject "habit-flow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B752DB92F69AA4B002FA83F /* Debug */,
@@ -327,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B752DBB2F69AA4B002FA83F /* Build configuration list for PBXNativeTarget "habit-tracker-trpo" */ = {
+		7B752DBB2F69AA4B002FA83F /* Build configuration list for PBXNativeTarget "habit-flow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B752DBC2F69AA4B002FA83F /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  ColorHex.swift
-//  habit-tracker-trpo
+//  habit-flow
 //
 //  Created by Leo Proger on 3/17/2026.
 //
