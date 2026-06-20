@@ -29,7 +29,7 @@ get reminders, and follow your progress through statistics and a calendar.
 
 | New habit | Habit details | Bad habits |
 |:---:|:---:|:---:|
-| <img width="220" src="https://github.com/user-attachments/assets/a2a7f484-042c-4e36-9e1d-31a7d3ba6ab8" /> | <img width="220" src="https://github.com/user-attachments/assets/63e3eff1-8918-48bd-8526-a94041583378" /> | _screenshot_ |
+| <img width="220" src="https://github.com/user-attachments/assets/a2a7f484-042c-4e36-9e1d-31a7d3ba6ab8" /> | <img width="220" src="https://github.com/user-attachments/assets/63e3eff1-8918-48bd-8526-a94041583378" /> | <img width="220" src="https://github.com/user-attachments/assets/4adff489-6064-41e5-b546-fb1b615f72a2" /> |
 
 ## Requirements
 
@@ -140,7 +140,7 @@ habit-flow/
 
 | Создание привычки | Детали привычки | Вредные привычки |
 |:---:|:---:|:---:|
-| <img width="220" src="https://github.com/user-attachments/assets/a2a7f484-042c-4e36-9e1d-31a7d3ba6ab8" /> | <img width="220" src="https://github.com/user-attachments/assets/63e3eff1-8918-48bd-8526-a94041583378" /> | _скриншот_ |
+| <img width="220" src="https://github.com/user-attachments/assets/a2a7f484-042c-4e36-9e1d-31a7d3ba6ab8" /> | <img width="220" src="https://github.com/user-attachments/assets/63e3eff1-8918-48bd-8526-a94041583378" /> | <img width="220" src="https://github.com/user-attachments/assets/4adff489-6064-41e5-b546-fb1b615f72a2" /> |
 
 ## Требования
 
