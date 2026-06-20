@@ -23,21 +23,13 @@ get reminders, and follow your progress through statistics and a calendar.
 
 ## Screenshots
 
-<!-- Replace the placeholders with real screenshots -->
-
 | Habit list | Statistics | Calendar |
 |:---:|:---:|:---:|
-| <img width="585" height="1266" alt="IMG_0889" src="https://github.com/user-attachments/assets/643a577b-9347-485c-8318-0e4ed9715c9c" />
- | <img width="585" height="1266" alt="IMG_0890" src="https://github.com/user-attachments/assets/5365a984-243e-450f-8ba9-3030836b2c87" />
- | <img width="585" height="1266" alt="IMG_0891" src="https://github.com/user-attachments/assets/0b0acbeb-0b51-4d54-8828-8e5cfdd4d994" />
- |
+| <img width="220" src="https://github.com/user-attachments/assets/643a577b-9347-485c-8318-0e4ed9715c9c" /> | <img width="220" src="https://github.com/user-attachments/assets/5365a984-243e-450f-8ba9-3030836b2c87" /> | <img width="220" src="https://github.com/user-attachments/assets/0b0acbeb-0b51-4d54-8828-8e5cfdd4d994" /> |
 
 | New habit | Habit details | Reminders |
 |:---:|:---:|:---:|
-| <img width="585" height="1266" alt="IMG_0892" src="https://github.com/user-attachments/assets/a2a7f484-042c-4e36-9e1d-31a7d3ba6ab8" />
- | <img width="585" height="1266" alt="IMG_0893" src="https://github.com/user-attachments/assets/63e3eff1-8918-48bd-8526-a94041583378" />
- | <img width="585" height="1266" alt="IMG_0892" src="https://github.com/user-attachments/assets/2e53c1b1-ac1f-44df-a79b-0cf857376333" />
- |
+| <img width="220" src="https://github.com/user-attachments/assets/a2a7f484-042c-4e36-9e1d-31a7d3ba6ab8" /> | <img width="220" src="https://github.com/user-attachments/assets/63e3eff1-8918-48bd-8526-a94041583378" /> | <img width="220" src="https://github.com/user-attachments/assets/2e53c1b1-ac1f-44df-a79b-0cf857376333" /> |
 
 ## Requirements
 
@@ -142,15 +134,13 @@ habit-flow/
 
 ## Скриншоты
 
-<!-- Замените плейсхолдеры на реальные скриншоты -->
-
 | Список привычек | Статистика | Календарь |
 |:---:|:---:|:---:|
-| _скриншот_ | _скриншот_ | _скриншот_ |
+| <img width="220" src="https://github.com/user-attachments/assets/643a577b-9347-485c-8318-0e4ed9715c9c" /> | <img width="220" src="https://github.com/user-attachments/assets/5365a984-243e-450f-8ba9-3030836b2c87" /> | <img width="220" src="https://github.com/user-attachments/assets/0b0acbeb-0b51-4d54-8828-8e5cfdd4d994" /> |
 
 | Создание привычки | Детали привычки | Уведомления |
 |:---:|:---:|:---:|
-| _скриншот_ | _скриншот_ | _скриншот_ |
+| <img width="220" src="https://github.com/user-attachments/assets/a2a7f484-042c-4e36-9e1d-31a7d3ba6ab8" /> | <img width="220" src="https://github.com/user-attachments/assets/63e3eff1-8918-48bd-8526-a94041583378" /> | <img width="220" src="https://github.com/user-attachments/assets/2e53c1b1-ac1f-44df-a79b-0cf857376333" /> |
 
 ## Требования
 
