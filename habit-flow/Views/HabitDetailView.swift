@@ -74,16 +74,16 @@ struct HabitDetailView: View {
 					.padding(.bottom, 20)
 				}
 			}
-			.navigationTitle("Привычка")
+			.navigationTitle("Habit")
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbarColorScheme(.dark, for: .navigationBar)
 			.toolbar {
 				ToolbarItem(placement: .cancellationAction) {
-					Button("Отмена") { dismiss() }
+					Button("Cancel") { dismiss() }
 						.foregroundStyle(.white.opacity(0.5))
 				}
 				ToolbarItem(placement: .confirmationAction) {
-					Button("Сохранить") { save() }
+					Button("Save") { save() }
 						.foregroundStyle(
 							name.isEmpty
 								? .white.opacity(0.2) : Color(hex: colorHex)
@@ -93,15 +93,15 @@ struct HabitDetailView: View {
 				}
 			}
 		}
-		.alert("Удалить привычку?", isPresented: $showDeleteAlert) {
-			Button("Удалить", role: .destructive) {
+		.alert("Delete Habit?", isPresented: $showDeleteAlert) {
+			Button("Delete", role: .destructive) {
 				NotificationManager.cancel(for: habit.id)
 				modelContext.delete(habit)
 				dismiss()
 			}
-			Button("Отмена", role: .cancel) {}
+			Button("Cancel", role: .cancel) {}
 		} message: {
-			Text("Весь прогресс будет удалён безвозвратно.")
+			Text("All progress will be permanently deleted.")
 		}
 	}
 
@@ -122,15 +122,15 @@ struct HabitDetailView: View {
 
 	private var textFields: some View {
 		VStack(spacing: 10) {
-			TextField("Название", text: $name)
+			TextField("Name", text: $name)
 				.styledField()
-			TextField("Описание (необязательно)", text: $description)
+			TextField("Description (optional)", text: $description)
 				.styledField()
 		}
 	}
 
 	private var frequencySection: some View {
-		section(title: "Периодичность") {
+		section(title: "Frequency") {
 			Picker("", selection: $frequency) {
 				ForEach(Habit.Frequency.allCases, id: \.self) { f in
 					Text(f.rawValue).tag(f)
@@ -142,7 +142,7 @@ struct HabitDetailView: View {
 	}
 
 	private var colorSection: some View {
-		section(title: "Цвет") {
+		section(title: "Color") {
 			HStack(spacing: 10) {
 				ForEach(colors, id: \.self) { hex in
 					Circle()
@@ -163,7 +163,7 @@ struct HabitDetailView: View {
 	}
 
 	private var iconSection: some View {
-		section(title: "Иконка") {
+		section(title: "Icon") {
 			LazyVGrid(
 				columns: Array(repeating: GridItem(.flexible()), count: 7),
 				spacing: 10
@@ -191,17 +191,17 @@ struct HabitDetailView: View {
 	}
 
 	private var reminderSection: some View {
-		section(title: "Напоминание") {
+		section(title: "Reminder") {
 			VStack(spacing: 12) {
 				Toggle(isOn: $reminderOn) {
-					Label("Включить", systemImage: "bell.fill").foregroundStyle(
+					Label("Enable", systemImage: "bell.fill").foregroundStyle(
 						.white
 					)
 				}
 				.tint(Color(hex: colorHex))
 				if reminderOn {
 					DatePicker(
-						"Время",
+						"Time",
 						selection: $reminderTime,
 						displayedComponents: .hourAndMinute
 					)
@@ -220,7 +220,7 @@ struct HabitDetailView: View {
 		} label: {
 			HStack(spacing: 8) {
 				Image(systemName: "trash.fill")
-				Text("Удалить привычку")
+				Text("Delete Habit")
 					.fontWeight(.semibold)
 			}
 			.foregroundStyle(Color(hex: "F87171"))

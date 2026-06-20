@@ -17,9 +17,9 @@ struct SideMenuView: View {
 	// (String, String, ContentView.AppTab) — tuple, анонимная структура с тремя полями
 	private let menuItems:
 		[(icon: String, title: String, tab: ContentView.AppTab)] = [
-			("checklist", "Привычки", .habits),
-			("chart.bar.fill", "Статистика", .statistics),
-			("calendar", "Календарь", .calendar),
+			("checklist", "Habits", .habits),
+			("chart.bar.fill", "Statistics", .statistics),
+			("calendar", "Calendar", .calendar),
 		]
 
 	var body: some View {
@@ -35,7 +35,7 @@ struct SideMenuView: View {
 					.font(.title.bold())
 					.foregroundStyle(.white)
 
-				Text("Формируй себя каждый день")
+				Text("Build yourself every day")
 					.font(.caption)
 					.foregroundStyle(.white.opacity(0.35))
 			}

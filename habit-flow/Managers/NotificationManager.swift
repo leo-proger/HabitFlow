@@ -30,8 +30,8 @@ enum NotificationManager {
         let content = UNMutableNotificationContent()
         content.title = habit.name
         content.body  = habit.isBad
-            ? "Держись! Не поддавайся соблазну 💪"
-            : "Время выполнить привычку! Не забудь отметить её ✅"
+            ? "Stay strong! Don't give in to temptation 💪"
+            : "Time to complete your habit! Don't forget to mark it ✅"
         content.sound = .default
 
         for weekday in weekdays {

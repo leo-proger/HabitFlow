@@ -56,7 +56,7 @@ struct StatisticsView: View {
 					.font(.title2.weight(.medium))
 					.frame(width: 44, height: 44)
 			}
-			Text("Статистика")
+			Text("Statistics")
 				.font(.title2.bold()).foregroundStyle(.white)
 			Spacer()
 		}
@@ -67,8 +67,8 @@ struct StatisticsView: View {
 
 	private var segmentPicker: some View {
 		HStack(spacing: 8) {
-			segmentButton(title: "Полезные", isBad: false)
-			segmentButton(title: "Вредные", isBad: true)
+			segmentButton(title: "Good", isBad: false)
+			segmentButton(title: "Bad", isBad: true)
 		}
 		.padding(4)
 		.background(Color.white.opacity(0.05))
@@ -117,7 +117,7 @@ struct StatisticsView: View {
 
 	private var chartSection: some View {
 		VStack(alignment: .leading, spacing: 12) {
-			Text(showBadHabits ? "Срывов за месяц" : "Выполнено привычек за месяц")
+			Text(showBadHabits ? "Relapses this month" : "Habits completed this month")
 				.font(.subheadline.weight(.semibold))
 				.foregroundStyle(.white.opacity(0.5))
 
@@ -203,49 +203,49 @@ struct StatisticsView: View {
 		return HStack(spacing: 10) {
 			if showBadHabits {
 				statCard(
-					title: "Сегодня",
+					title: "Today",
 					value: "\(todayCount)/\(currentHabits.count)",
-					unit: "срывов",
+					unit: "relapses",
 					icon: "exclamationmark.circle.fill",
 					color: todayCount == 0
 						? Color(hex: "4ADE80")
 						: Color(hex: "F87171")
 				)
 				statCard(
-					title: "Серия без срывов",
+					title: "Relapse-free streak",
 					value: "\(bestStreakHabit.map { daysWithout($0) } ?? 0)",
-					unit: "дней",
+					unit: "days",
 					icon: "shield.fill",
 					color: Color(hex: "60A5FA")
 				)
 				statCard(
-					title: "Всего срывов",
+					title: "Total relapses",
 					value: "\(currentHabits.reduce(0) { $0 + $1.completionDates.count })",
-					unit: "за всё время",
+					unit: "all time",
 					icon: "flame.fill",
 					color: Color(hex: "FB923C")
 				)
 			} else {
 				statCard(
-					title: "Сегодня",
+					title: "Today",
 					value: "\(todayCount)/\(currentHabits.count)",
-					unit: "привычек",
+					unit: "habits",
 					icon: "checkmark.circle.fill",
 					color: todayCount == currentHabits.count && currentHabits.count > 0
 						? Color(hex: "4ADE80")
 						: Color(hex: "60A5FA")
 				)
 				statCard(
-					title: "Серия",
+					title: "Streak",
 					value: "\(bestStreakHabit?.currentStreak ?? 0)",
-					unit: "дней",
+					unit: "days",
 					icon: "flame.fill",
 					color: Color(hex: "FB923C")
 				)
 				statCard(
-					title: "Рекорд",
+					title: "Best",
 					value: "\(bestStreakHabit?.bestStreak ?? 0)",
-					unit: "дней подряд",
+					unit: "days in a row",
 					icon: "trophy.fill",
 					color: Color(hex: "FBBF24")
 				)
@@ -292,7 +292,7 @@ struct StatisticsView: View {
 			Image(systemName: showBadHabits ? "exclamationmark.circle" : "sparkles")
 				.font(.system(size: 40))
 				.foregroundStyle(accentColor.opacity(0.4))
-			Text(showBadHabits ? "Нет вредных привычек" : "Нет полезных привычек")
+			Text(showBadHabits ? "No bad habits" : "No good habits")
 				.font(.headline).foregroundStyle(.white.opacity(0.4))
 		}
 		.frame(maxWidth: .infinity)
@@ -304,8 +304,8 @@ struct StatisticsView: View {
 			Image(systemName: "chart.bar.xaxis")
 				.font(.system(size: 40))
 				.foregroundStyle(Color(hex: "4ADE80").opacity(0.4))
-			Text("Нет привычек").font(.headline).foregroundStyle(.white.opacity(0.4))
-			Text("Сначала добавь привычку").font(.caption).foregroundStyle(.white.opacity(0.2))
+			Text("No habits").font(.headline).foregroundStyle(.white.opacity(0.4))
+			Text("Add a habit first").font(.caption).foregroundStyle(.white.opacity(0.2))
 		}
 	}
 }

@@ -51,7 +51,7 @@ struct HabitRowView: View {
 			if habit.currentStreak > 1 {
 				HStack(spacing: 4) {
 					Image(systemName: "flame.fill").font(.caption2).foregroundStyle(.orange)
-					Text("\(habit.currentStreak) дней подряд")
+					Text("\(habit.currentStreak) days in a row")
 						.font(.caption2).foregroundStyle(.orange.opacity(0.85))
 				}
 				.transition(.opacity.combined(with: .scale(scale: 0.8)))

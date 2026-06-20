@@ -47,16 +47,16 @@ struct AddHabitView: View {
 					.padding(.bottom, 20)
 				}
 			}
-			.navigationTitle(isBad ? "Новая вредная привычка" : "Новая привычка")
+			.navigationTitle(isBad ? "New Bad Habit" : "New Habit")
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbarColorScheme(.dark, for: .navigationBar)
 			.toolbar {
 				ToolbarItem(placement: .cancellationAction) {
-					Button("Отмена") { dismiss() }
+					Button("Cancel") { dismiss() }
 						.foregroundStyle(.white.opacity(0.5))
 				}
 				ToolbarItem(placement: .confirmationAction) {
-					Button("Создать") { save() }
+					Button("Create") { save() }
 						.foregroundStyle(name.isEmpty ? .white.opacity(0.2) : Color(hex: "4ADE80"))
 						.fontWeight(.semibold)
 						.disabled(name.isEmpty)
@@ -69,15 +69,15 @@ struct AddHabitView: View {
 
 	private var textFields: some View {
 		VStack(spacing: 10) {
-			TextField("Название", text: $name)  // $name — Binding<String>
+			TextField("Name", text: $name)
 				.styledField()
-			TextField("Описание (необязательно)", text: $description)
+			TextField("Description (optional)", text: $description)
 				.styledField()
 		}
 	}
 
 	private var frequencySection: some View {
-		section(title: "Периодичность") {
+		section(title: "Frequency") {
 			// Picker с .segmented стилем — горизонтальные кнопки
 			Picker("", selection: $frequency) {
 				ForEach(Habit.Frequency.allCases, id: \.self) { f in
@@ -91,7 +91,7 @@ struct AddHabitView: View {
 	}
 
 	private var colorSection: some View {
-		section(title: "Цвет") {
+		section(title: "Color") {
 			HStack(spacing: 10) {
 				ForEach(colors, id: \.self) { hex in
 					Circle()
@@ -112,7 +112,7 @@ struct AddHabitView: View {
 	}
 
 	private var iconSection: some View {
-		section(title: "Иконка") {
+		section(title: "Icon") {
 			// LazyVGrid — ленивая сетка, аналог RecyclerView с GridLayoutManager
 			LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 10) {
 				ForEach(icons, id: \.self) { icon in
@@ -135,16 +135,16 @@ struct AddHabitView: View {
 	}
 
 	private var reminderSection: some View {
-		section(title: "Напоминание") {
+		section(title: "Reminder") {
 			VStack(spacing: 12) {
 				Toggle(isOn: $reminderOn) {
-					Label("Включить", systemImage: "bell.fill")
+					Label("Enable", systemImage: "bell.fill")
 						.foregroundStyle(.white)
 				}
 				.tint(Color(hex: selectedColor))
 
 				if reminderOn {
-					DatePicker("Время", selection: $reminderTime, displayedComponents: .hourAndMinute)
+					DatePicker("Time", selection: $reminderTime, displayedComponents: .hourAndMinute)
 						.foregroundStyle(.white)
 						.colorScheme(.dark)
 						// transition — анимация появления DatePicker

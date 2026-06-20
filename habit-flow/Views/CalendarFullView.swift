@@ -12,12 +12,12 @@ struct CalendarFullView: View {
 	private static let cal: Calendar = {
 		var c = Calendar(identifier: .gregorian)
 		c.firstWeekday = 2
-		c.locale = Locale(identifier: "ru_RU")
+		c.locale = Locale(identifier: "en_US")
 		return c
 	}()
 	private var cal: Calendar { Self.cal }
 
-	private let weekLabels = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+	private let weekLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 	private let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 7)
 
 	private var isCurrentMonth: Bool {
@@ -59,7 +59,7 @@ struct CalendarFullView: View {
 					.font(.title2.weight(.medium))
 					.frame(width: 44, height: 44)
 			}
-			Text("Мой прогресс")
+			Text("My Progress")
 				.font(.title2.bold()).foregroundStyle(.white)
 			Spacer()
 			if !isCurrentMonth {
@@ -69,7 +69,7 @@ struct CalendarFullView: View {
 						selectedDate = Date()
 					}
 				} label: {
-					Text("Сегодня")
+					Text("Today")
 						.font(.caption.weight(.semibold))
 						.foregroundStyle(Color(hex: "4ADE80"))
 						.padding(.horizontal, 10).padding(.vertical, 6)
@@ -165,11 +165,11 @@ struct CalendarFullView: View {
 				.padding(.horizontal, 4)
 
 			if relevantHabits.isEmpty {
-				Text(isFuture(date) ? "Этот день ещё впереди" : "Нет привычек на этот день")
+				Text(isFuture(date) ? "This day is yet to come" : "No habits for this day")
 					.font(.subheadline).foregroundStyle(.white.opacity(0.3))
 					.padding(.horizontal, 4)
 			} else if isFuture(date) {
-				Text("Этот день ещё впереди")
+				Text("This day is yet to come")
 					.font(.subheadline).foregroundStyle(.white.opacity(0.3))
 					.padding(.horizontal, 4)
 			} else {
@@ -183,7 +183,7 @@ struct CalendarFullView: View {
 						ForEach(missedHabits) { habitRow(habit: $0, done: false) }
 					}
 				}
-				Text("\(completedHabits.count) из \(relevantHabits.count) привычек выполнено")
+				Text("\(completedHabits.count) of \(relevantHabits.count) habits completed")
 					.font(.caption).foregroundStyle(.white.opacity(0.3))
 					.frame(maxWidth: .infinity, alignment: .center)
 					.padding(.top, 4)
@@ -223,9 +223,9 @@ struct CalendarFullView: View {
 
 	private var colorLegend: some View {
 		HStack(spacing: 16) {
-			legendItem(color: Color(hex: "4ADE80"), label: "Всё выполнено")
-			legendItem(color: Color(hex: "FBBF24"), label: "Частично")
-			legendItem(color: Color(hex: "F87171"), label: "Не выполнено")
+			legendItem(color: Color(hex: "4ADE80"), label: "All done")
+			legendItem(color: Color(hex: "FBBF24"), label: "Partial")
+			legendItem(color: Color(hex: "F87171"), label: "Missed")
 		}
 		.frame(maxWidth: .infinity, alignment: .center)
 		.padding(.vertical, 10).padding(.horizontal, 16)
@@ -280,7 +280,7 @@ struct CalendarFullView: View {
 
 	private var monthTitle: String {
 		let fmt = DateFormatter()
-		fmt.locale = Locale(identifier: "ru_RU")
+		fmt.locale = Locale(identifier: "en_US")
 		fmt.dateFormat = "LLLL yyyy"
 		return fmt.string(from: displayedMonth).capitalized
 	}
@@ -306,8 +306,8 @@ struct CalendarFullView: View {
 
 	private func dayTitle(_ date: Date) -> String {
 		let fmt = DateFormatter()
-		fmt.locale = Locale(identifier: "ru_RU")
-		fmt.dateFormat = "d MMMM"
+		fmt.locale = Locale(identifier: "en_US")
+		fmt.dateFormat = "MMMM d"
 		return fmt.string(from: date)
 	}
 }

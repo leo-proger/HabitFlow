@@ -12,12 +12,12 @@ struct MonthlyCalendarView: View {
 	private static let cal: Calendar = {
 		var c = Calendar(identifier: .gregorian)
 		c.firstWeekday = 2
-		c.locale = Locale(identifier: "ru_RU")
+		c.locale = Locale(identifier: "en_US")
 		return c
 	}()
 	private var cal: Calendar { Self.cal }
 
-	private let weekLabels = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+	private let weekLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 	private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 7)
 
 	private var isCurrentMonth: Bool {
@@ -106,7 +106,7 @@ struct MonthlyCalendarView: View {
 					guard !isAnimating else { return }
 					withAnimation(.easeOut(duration: 0.2)) { displayedMonth = Date() }
 				} label: {
-					Text("Сегодня")
+					Text("Today")
 						.font(.caption2.weight(.semibold))
 						.foregroundStyle(Color(hex: "4ADE80"))
 						.padding(.horizontal, 8).padding(.vertical, 4)
@@ -163,7 +163,7 @@ struct MonthlyCalendarView: View {
 
 	private func monthTitle(for month: Date) -> String {
 		let fmt = DateFormatter()
-		fmt.locale = Locale(identifier: "ru_RU")
+		fmt.locale = Locale(identifier: "en_US")
 		fmt.dateFormat = "LLLL yyyy"
 		return fmt.string(from: month).capitalized
 	}

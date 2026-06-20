@@ -43,22 +43,22 @@ enum SampleData {
         }
 
         let demos: [Demo] = [
-            Demo(name: "Медитация", description: "10 минут осознанности",
+            Demo(name: "Meditation", description: "10 minutes of mindfulness",
                  color: "A78BFA", icon: "brain.head.profile", frequency: .daily,
                  isBad: false, reminderHour: 8, streak: 14, missEvery: 12),
-            Demo(name: "Чтение", description: "30 страниц перед сном",
+            Demo(name: "Reading", description: "30 pages before bed",
                  color: "60A5FA", icon: "book.fill", frequency: .daily,
                  isBad: false, reminderHour: 21, streak: 6, missEvery: 8),
-            Demo(name: "Тренировка", description: "Силовая или кардио",
+            Demo(name: "Workout", description: "Strength or cardio",
                  color: "FB923C", icon: "dumbbell.fill", frequency: .daily,
                  isBad: false, reminderHour: 18, streak: 3, missEvery: 4),
-            Demo(name: "Утренняя пробежка", description: "5 км по будням",
+            Demo(name: "Morning Run", description: "5 km on weekdays",
                  color: "4ADE80", icon: "figure.walk", frequency: .weekdays,
                  isBad: false, reminderHour: 7, streak: 8, missEvery: 6),
-            Demo(name: "Стакан воды", description: "Сразу после пробуждения",
+            Demo(name: "Glass of Water", description: "Right after waking up",
                  color: "34D399", icon: "drop.fill", frequency: .daily,
                  isBad: false, reminderHour: nil, streak: 5, missEvery: 7),
-            Demo(name: "Без кофе вечером", description: "Не пить кофе после 16:00",
+            Demo(name: "No Evening Coffee", description: "No coffee after 4 PM",
                  color: "F87171", icon: "cup.and.saucer.fill", frequency: .daily,
                  isBad: true, reminderHour: 16, streak: 4, missEvery: 5),
         ]

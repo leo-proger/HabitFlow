@@ -50,9 +50,9 @@ final class Habit {
 	// MARK: - Nested enum
 	// CaseIterable — автоматически добавляет свойство .allCases: [Frequency]
 	enum Frequency: String, CaseIterable {
-		case daily = "Каждый день"
-		case weekdays = "По будням"
-		case weekends = "По выходным"
+		case daily = "Every day"
+		case weekdays = "Weekdays"
+		case weekends = "Weekends"
 	}
 
 	// Computed property для работы с enum вместо сырой строки

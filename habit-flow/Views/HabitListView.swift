@@ -69,7 +69,7 @@ struct HabitListView: View {
 								Button(role: .destructive) {
 									habitToDelete = habit
 								} label: {
-									Label("Удалить", systemImage: "trash.fill")
+									Label("Delete", systemImage: "trash.fill")
 								}
 							}
 					}
@@ -104,19 +104,19 @@ struct HabitListView: View {
 		.sheet(isPresented: $showAddHabit) { AddHabitView(isBad: showBadHabits) }
 		.sheet(item: $selectedHabit) { habit in HabitDetailView(habit: habit) }
 		.alert(
-			"Удалить привычку?",
+			"Delete Habit?",
 			isPresented: Binding(
 				get: { habitToDelete != nil },
 				set: { if !$0 { habitToDelete = nil } }
 			)
 		) {
-			Button("Удалить", role: .destructive) {
+			Button("Delete", role: .destructive) {
 				if let h = habitToDelete { modelContext.delete(h); habitToDelete = nil }
 			}
-			Button("Отмена", role: .cancel) { habitToDelete = nil }
+			Button("Cancel", role: .cancel) { habitToDelete = nil }
 		} message: {
 			if let h = habitToDelete {
-				Text("Привычка «\(h.name)» и весь её прогресс будут удалены безвозвратно.")
+				Text("The habit \"\(h.name)\" and all its progress will be permanently deleted.")
 			}
 		}
 	}
@@ -133,7 +133,7 @@ struct HabitListView: View {
 					.font(.title2.weight(.medium))
 					.frame(width: 44, height: 44)
 			}
-			Text(showBadHabits ? "Мои вредные привычки" : "Мои привычки")
+			Text(showBadHabits ? "My Bad Habits" : "My Habits")
 				.font(.title2.bold()).foregroundStyle(.white)
 			Spacer()
 			progressRing
@@ -165,9 +165,9 @@ struct HabitListView: View {
 			Image(systemName: showBadHabits ? "exclamationmark.circle" : "sparkles")
 				.font(.system(size: 40))
 				.foregroundStyle(accentColor.opacity(0.5))
-			Text(showBadHabits ? "Добавь первую вредную привычку" : "Добавь первую привычку")
+			Text(showBadHabits ? "Add your first bad habit" : "Add your first habit")
 				.font(.headline).foregroundStyle(.white.opacity(0.5))
-			Text(showBadHabits ? "Осознанность — первый шаг к изменениям" : "Маленькие шаги — большие перемены")
+			Text(showBadHabits ? "Awareness is the first step to change" : "Small steps lead to big changes")
 				.font(.caption).foregroundStyle(.white.opacity(0.25))
 		}
 		.frame(maxWidth: .infinity).padding(.vertical, 48)
@@ -179,7 +179,7 @@ struct HabitListView: View {
 		Button { showAddHabit = true } label: {
 			HStack(spacing: 8) {
 				Image(systemName: "plus.circle.fill").font(.title3)
-				Text("Добавить привычку").font(.body.weight(.semibold))
+				Text("Add Habit").font(.body.weight(.semibold))
 			}
 			.foregroundStyle(accentColor)
 			.frame(maxWidth: .infinity)
@@ -203,7 +203,7 @@ struct HabitListView: View {
 			HStack(spacing: 8) {
 				Image(systemName: showBadHabits ? "checkmark.circle.fill" : "exclamationmark.circle.fill")
 					.font(.title3)
-				Text(showBadHabits ? "Обратно к привычкам" : "Вредные привычки")
+				Text(showBadHabits ? "Back to Good Habits" : "Bad Habits")
 					.font(.body.weight(.semibold))
 			}
 			.foregroundStyle(showBadHabits ? Color(hex: "4ADE80") : Color(hex: "F87171"))
